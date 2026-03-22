@@ -1,0 +1,54 @@
+print("Калькулятор запущен. Введи 'стоп' для выхода.")
+
+print("Введите число:")
+a = float(input())
+
+while True:
+    print("Операция (+, -, *, /, //, %, ^, root) или 'стоп':")
+    cmd = input()
+    
+    if cmd == "стоп":
+        print("Калькулятор завершён")
+        break
+    
+    print("Введите число:")
+    b = float(input())
+
+    if cmd == "+":
+        a = a + b
+        print(f"Результат: {a}")
+    elif cmd == "-":
+        a = a - b
+        print(f"Результат: {a}")
+    elif cmd == "*":
+        a = a * b
+        print(f"Результат: {a}")
+    elif cmd == "/":
+        if b == 0:
+            print("на 0 делить нельзя")
+        else:
+            a = a / b
+            print(f"Результат: {a}")
+    elif cmd == "//":
+        if b == 0:
+            print("на 0 делить нельзя")
+        else:
+            a = a // b
+            print(f"Результат: {a}")
+    elif cmd == "%":
+        if b == 0:
+            print("на 0 делить нельзя")
+        else:
+            a = a % b
+            print(f"Результат: {a}")
+    elif cmd == "^":
+        a = a ** b
+        print(f"Результат: {a}")
+    elif cmd == "root":
+        if b == 0:
+            print("Степень корня не может быть 0")
+        else:
+            a = a ** (1 / b)
+            print(f"Результат: {a}")
+    else:
+        print("Неверный знак операции!")
